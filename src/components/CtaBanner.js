@@ -129,12 +129,13 @@ export default function CtaBanner() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6 }}
-              className="relative bg-gradient-to-b from-[#242426] to-[#1C1C1E] border border-white/15 rounded-[36px] sm:rounded-[44px] p-6 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl group hover:border-[#FDFC22]/50 transition-colors"
+              className="relative bg-gradient-to-b from-[#242426] to-[#1C1C1E] border border-white/15 rounded-[36px] sm:rounded-[44px] p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-hidden shadow-2xl group hover:border-[#FDFC22]/50 transition-all"
             >
               {/* Subtle Ambient Yellow Card Glow */}
               <div className="absolute top-0 right-0 w-72 h-72 bg-[#FDFC22]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#FDFC22]/15 transition-colors" />
 
-              <div>
+              {/* Top Section: App Details */}
+              <div className="relative z-10">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FDFC22]/15 border border-[#FDFC22]/30 text-[#FDFC22] text-xs font-black uppercase tracking-wider mb-5">
                   {app.badgeIcon}
@@ -154,7 +155,7 @@ export default function CtaBanner() {
                 </p>
 
                 {/* Feature Highlights */}
-                <div className="space-y-2.5 mb-8">
+                <div className="space-y-2.5 mb-6">
                   {app.highlights.map((item, i) => (
                     <div key={i} className="flex items-center gap-2.5 text-sm sm:text-base text-white/90">
                       <div className="w-5 h-5 rounded-full bg-[#FDFC22] flex items-center justify-center shrink-0 shadow-sm">
@@ -166,15 +167,26 @@ export default function CtaBanner() {
                 </div>
               </div>
 
-              {/* Bottom Phone Preview & Store Links */}
-              <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center gap-6">
-                {/* Mini Mockup Visual */}
-                <div className="w-28 sm:w-32 shrink-0 transform group-hover:scale-105 transition-transform duration-300">
-                  <IphoneMockup src={app.mockup} alt={app.title} shadow={false} />
+              {/* Middle Section: Centered Mockup Display with Dedicated Spacing */}
+              <div className="relative py-6 my-2 flex justify-center items-center z-10">
+                <div className="relative group-hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-[#FDFC22]/15 rounded-full blur-2xl pointer-events-none" />
+                  <IphoneMockup
+                    src={app.mockup}
+                    alt={app.title}
+                    width="w-[190px] sm:w-[220px]"
+                    shadow={true}
+                  />
+                </div>
+              </div>
+
+              {/* Bottom Section: Fully Visible, Non-Overlapping Store Download Buttons */}
+              <div className="pt-6 mt-4 border-t border-white/10 relative z-20">
+                <div className="text-xs uppercase tracking-wider text-white/60 font-bold text-center mb-3.5">
+                  Download Directly For Your Device
                 </div>
 
-                {/* Store Action Buttons */}
-                <div className="flex flex-col gap-3 w-full sm:flex-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full">
                   {/* Apple App Store Button */}
                   <motion.a
                     whileHover={{ scale: 1.03, y: -2 }}
@@ -182,10 +194,10 @@ export default function CtaBanner() {
                     href={app.iosUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between px-5 py-3.5 rounded-2xl bg-white text-black hover:bg-[#FDFC22] transition-colors shadow-lg group/btn"
+                    className="flex items-center justify-between px-5 py-4 rounded-2xl bg-white text-black hover:bg-[#FDFC22] transition-colors shadow-lg group/btn cursor-pointer"
                   >
                     <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 fill-black shrink-0" viewBox="0 0 24 24">
+                      <svg className="w-7 h-7 fill-black shrink-0" viewBox="0 0 24 24">
                         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.64 1.35-.57.65-1.07 1.71-.93 2.73 1.01.08 2.03-.48 2.65-1.23z" />
                       </svg>
                       <div className="text-left">
@@ -207,10 +219,10 @@ export default function CtaBanner() {
                     href={app.androidUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between px-5 py-3.5 rounded-2xl bg-[#28282A] text-white hover:bg-[#333336] border border-white/10 transition-colors shadow-lg group/btn"
+                    className="flex items-center justify-between px-5 py-4 rounded-2xl bg-[#28282A] text-white hover:bg-[#38383C] border border-white/10 transition-colors shadow-lg group/btn cursor-pointer"
                   >
                     <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none">
+                      <svg className="w-7 h-7 shrink-0" viewBox="0 0 24 24" fill="none">
                         <path
                           d="M3.609 1.814L13.793 12 3.61 22.186c-.352-.33-.61-.83-.61-1.486V3.3c0-.656.258-1.156.61-1.486z"
                           fill="#00E676"

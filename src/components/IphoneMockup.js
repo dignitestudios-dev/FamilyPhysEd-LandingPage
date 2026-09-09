@@ -6,12 +6,13 @@ export default function IphoneMockup({
   src = "/mockups/Home.png",
   alt = "Family Phys. Ed. App Screen",
   className = "",
+  width = "w-[280px] sm:w-[310px] md:w-[330px]",
   priority = false,
   shadow = true,
 }) {
   return (
     <div
-      className={`relative mx-auto w-[280px] sm:w-[310px] md:w-[330px] select-none ${
+      className={`relative mx-auto ${width} select-none ${
         shadow ? "drop-shadow-[0_25px_60px_rgba(0,0,0,0.85)]" : ""
       } ${className}`}
     >
