@@ -107,8 +107,9 @@ export default function HowItWorksSection() {
                 <div className="absolute inset-0 bg-[#FDFC22]/25 rounded-full blur-2xl transform scale-90 group-hover:scale-105 transition-transform duration-500" />
                 <div className="transform group-hover:scale-105 transition-transform duration-500">
                   <IphoneMockup
-                    src="/mockups/Home (2).png"
+                    src="/mockups/new/Home (2).png"
                     alt="Sessions and Classes Screen"
+                    width="w-[260px] sm:w-[290px] md:w-[320px]"
                   />
                 </div>
               </div>

@@ -48,7 +48,7 @@ export default function AppTourSection() {
         "Interactive map of local park meetups",
         "One-tap family check-in and streak tracking",
       ],
-      mockup: "/mockups/Home.png",
+      mockup: "/mockups/new/Home.png",
       badgeText: "Live Discovery",
     },
     {
@@ -63,7 +63,7 @@ export default function AppTourSection() {
         "Age-appropriate filters (Kids, Parents, Seniors)",
         "Calendar sync & automated weather reminders",
       ],
-      mockup: "/mockups/Home (2).png",
+      mockup: "/mockups/new/Home (2).png",
       badgeText: "Instant Reserve",
     },
     {
@@ -78,7 +78,7 @@ export default function AppTourSection() {
         "Photo sharing of weekend fitness meetups",
         "Direct coach Q&A and injury prevention tips",
       ],
-      mockup: "/mockups/Home (1).png",
+      mockup: "/mockups/new/Home (1).png",
       badgeText: "Community Chat",
     },
     {
@@ -93,7 +93,7 @@ export default function AppTourSection() {
         "Multi-generational fitness certifications",
         "Transparent family reviews and verified ratings",
       ],
-      mockup: "/mockups/Other User Profile.png",
+      mockup: "/mockups/new/Other User Profile.png",
       badgeText: "Verified Coaches",
     },
     {
@@ -108,7 +108,7 @@ export default function AppTourSection() {
         "Member-exclusive discounts on gear bundles",
         "Fast doorstep shipping with easy returns",
       ],
-      mockup: "/mockups/Home (3).png",
+      mockup: "/mockups/new/Home (3).png",
       badgeText: "Apparel & Gear",
     },
   ];

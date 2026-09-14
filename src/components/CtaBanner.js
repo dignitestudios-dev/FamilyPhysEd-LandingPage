@@ -15,7 +15,7 @@ export default function CtaBanner() {
       badgeIcon: <Users className="w-3.5 h-3.5" />,
       title: "Family Phys. Ed.",
       subtitle: "Member & Family App",
-      mockup: "/mockups/Home.png",
+      mockup: "/mockups/new/Home.png",
       iosUrl: "https://apps.apple.com/us/app/family-phys-ed-user/id6746496337",
       androidUrl:
         "https://play.google.com/store/apps/details?id=com.dignitestudios.familyphysusers&pcampaignid=web_share",
@@ -26,7 +26,7 @@ export default function CtaBanner() {
       badgeIcon: <Trophy className="w-3.5 h-3.5" />,
       title: "Family Phys. Ed. Coach",
       subtitle: "Trainer & Instructor App",
-      mockup: "/mockups/Other User Profile.png",
+      mockup: "/mockups/new/Other User Profile.png",
       iosUrl: "https://apps.apple.com/us/app/family-phys-ed-coach/id6746495686",
       androidUrl:
         "https://play.google.com/store/apps/details?id=com.dignitestudios.familyphyscoach&pcampaignid=web_share",

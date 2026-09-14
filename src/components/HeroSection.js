@@ -87,9 +87,10 @@ export default function HeroSection() {
           {/* iPhone Mockup */}
           <div className="relative z-10 transform hover:scale-[1.03] transition-transform duration-500">
             <IphoneMockup
-              src="/mockups/Home.png"
+              src="/mockups/new/Home.png"
               alt="Family Phys. Ed. Dashboard and Sessions"
               priority={true}
+              width="w-[260px] sm:w-[300px] md:w-[330px]"
             />
           </div>
 
